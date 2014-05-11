@@ -1,0 +1,13 @@
+name: mcMMO-WorldGuard
+version: ${project.version}
+description: >
+  mcMMO-WorldGuard is an extra plugin for mcMMO. It uses WorldGuard to enable/disable
+  certain aspects of mcMMO in WorldGuard regions. For example, you can use this plugin
+  to disable gaining Acrobatics XP in a jumping puzzle region. Or you can disable all
+  combat abilities in a arena region.
+
+author: TfT_02
+website: http://dev.bukkit.org/server-mods/mcmmo-worldguard/
+
+main: org.mcmmo.mcmmoworldguard.mcMMOWorldGuard
+softdepend: [mcMMO, WorldGuard]

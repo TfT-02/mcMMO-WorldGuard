@@ -1,0 +1,148 @@
+#
+#  mcMMO-WorldGuard configuration
+#  Last updated on ${project.version}
+#
+#####
+
+#
+#  Settings for mcMMO-WorldGuard in general
+###
+General:
+    # Should mcMMO-WorldGuard print out debug messages?
+    Verbose_Logging: false
+    # Should mcMMO-WorldGuard over-write configs to update, or make new ones ending in .new?
+    Config_Update_Overwrite: true
+
+#
+#  Settings for abilities in WorldGuard regions
+###
+Abilities:
+    Use_As_Whitelist: false
+
+    # Regions.<Region_Name>: Listed abilities are disabled in the region specified.
+    # Unless Use_As_Whitelist is enabled, in that case they are enabled in just that region and disabled elsewhere.
+    Regions:
+        Region_Name1:
+            # Acrobatics
+            - DODGE
+            - GRACEFUL_ROLL
+            - ROLL
+
+            # Alchemy
+            - CATALYSIS
+            - CONCOCTIONS
+
+            # Archery
+            - DAZE
+            - RETRIEVE
+            - SKILL_SHOT
+
+            # Axes
+            - SKULL_SPLITTER
+            - ARMOR_IMPACT
+            - AXE_MASTERY
+            - CRITICAL_HIT
+            - GREATER_IMPACT
+
+            # Excavation
+            - EXCAVATION_TREASURE_HUNTER
+            - GIGA_DRILL_BREAKER
+
+            # Fishing
+            - FISHERMANS_DIET
+            - FISHING_TREASURE_HUNTER
+            - ICE_FISHING
+            - MAGIC_HUNTER
+            - MASTER_ANGLER
+            - SHAKE
+
+            # Herbalism
+            - GREEN_TERRA
+            - FARMERS_DIET
+            - GREEN_THUMB_PLANT
+            - GREEN_THUMB_BLOCK
+            - HERBALISM_DOUBLE_DROPS
+            - HYLIAN_LUCK
+            - SHROOM_THUMB
+
+            # Mining
+            - SUPER_BREAKER
+            - BLAST_MINING
+            - MINING_DOUBLE_DROPS
+
+            # Repair
+            - ARCANE_FORGING
+            - REPAIR_MASTERY
+            - SUPER_REPAIR
+
+            # Smelting
+            - FLUX_MINING
+            - FUEL_EFFICIENCY
+            - SECOND_SMELT
+
+            # Swords
+            - SERRATED_STRIKES
+            - BLEED
+            - COUNTER
+
+            # Taming
+            - BEAST_LORE
+            - CALL_OF_THE_WILD
+            - ENVIROMENTALLY_AWARE
+            - FAST_FOOD
+            - GORE
+            - HOLY_HOUND
+            - SHARPENED_CLAWS
+            - SHOCK_PROOF
+            - THICK_FUR
+
+            # Unarmed
+            - BERSERK
+            - BLOCK_CRACKER
+            - DEFLECT
+            - DISARM
+            - IRON_ARM
+            - IRON_GRIP
+
+            # Woodcutting
+            - TREE_FELLER
+            - LEAF_BLOWER
+            - WOODCUTTING_DOUBLE_DROPS
+
+#
+#  Settings for experience in WorldGuard regions
+###
+Experience:
+    # Global_Modifier: Modifies XP gained in any region
+    Global_Modifier: 1.0
+
+    # Skills in this list will be affected by the XP modifiers
+    Affected_Skills:
+        - Swords
+        - Taming
+        - Acrobatics
+        - Excavation
+        - Herbalism
+        - Unarmed
+        - Woodcutting
+        - Mining
+        - Archery
+        - Axes
+        - Repair
+        - Fishing
+        - Alchemy
+
+    # XP gain reasons in this list will be affected by the XP modifiers
+    Affected_XP_Gains:
+        - PVP
+        - SHARED_PVP
+        - PVE
+        - SHARED_PVE
+        - VAMPIRISM
+        - COMMAND
+        - UNSPECIFIED
+
+    # Regions.<Region_Name>: Modifies XP gained in the defined region, global modifier still applies
+    Regions:
+        Region_Name1: 1.0
+        Region_Name2: 1.0
