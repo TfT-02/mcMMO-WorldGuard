@@ -1,0 +1,17 @@
+Changelog:
+Versions without changelogs probably had very small misc fixes, like tweaks to the source code
+
+Key:
+  + Addition
+  = Fix
+  ! Change
+  - Removal
+
+Version 1.0.1
+
+Version 1.0.0
+ + First release
+ + Added options to enable/disable abilities in specific regions
+ + Added XP modifiers for specific regions
+ + Added config option to configure which skills are affected
+ + Added config option to configure which xp reasons are affected
