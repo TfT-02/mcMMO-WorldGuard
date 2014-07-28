@@ -38,4 +38,4 @@ The typical command used to build mcMMO is: `mvn clean package install`
 Required Libraries:
 * Bukkit
 * mcMMO
-* Towny
+* WorldGuard
