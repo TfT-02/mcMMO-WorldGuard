@@ -34,9 +34,9 @@ public class Config extends ConfigLoader {
     public boolean getPreferBeta() { return config.getBoolean("General.Prefer_Beta", false); }
 
     /* WORLDGUARD */
-    public boolean getWGUseAsWhitelist() { return config.getBoolean("Abilities.Use_As_Whitelist", false); }
+    public boolean getAbilitiesUseAsWhitelist() { return config.getBoolean("Abilities.Use_As_Whitelist", false); }
 
-    public Set<String> getWGRegionList() {
+    public Set<String> getAbilitiesRegionList() {
         return config.getConfigurationSection("Abilities.Regions").getKeys(false);
     }
 
@@ -64,4 +64,7 @@ public class Config extends ConfigLoader {
 
         return list;
     }
+
+    public boolean getDeathPenaltyUseAsWhitelist() { return config.getBoolean("Death_Penalty.Use_As_Whitelist", false); }
+    public List<String> getDeathPenaltyRegionList() { return config.getStringList("Death_Penalty.Regions"); }
 }
