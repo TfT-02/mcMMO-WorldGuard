@@ -146,3 +146,15 @@ Experience:
     Regions:
         Region_Name1: 1.0
         Region_Name2: 1.0
+
+#
+#  Settings for death penalties in WorldGuard regions
+###
+Death_Penalty:
+    # Use the region list as a whitelist?
+    Use_As_Whitelist: false
+
+    # Players will not suffer hardcore death penalties in the regions listed below.
+    # If Use_As_Whitelist is set to true, player will suffer hardcore death penalties only in these regions.
+    Regions:
+    - no_penalty_here

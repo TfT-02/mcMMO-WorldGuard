@@ -1,6 +1,7 @@
 package org.mcmmo.mcmmoworldguard.util;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import org.bukkit.Location;
 
@@ -13,22 +14,18 @@ import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 
 public class RegionUtils {
 
-    public static boolean canDuelHereWG(Location location) {
-        return mcMMOWorldGuard.p.isWorldGuardEnabled() && canDuelHere(getRegion(location));
-    }
+    public static boolean getDeathConsequencesEnabled(Location location) {
+        boolean isWhitelist = Config.getInstance().getDeathPenaltyUseAsWhitelist();
 
-    private static boolean canDuelHere(String region) {
-        boolean isWhitelist = Config.getInstance().getWGUseAsWhitelist();
-
-        if (isListedRegion(region)) {
+        if (isListedRegion(getRegion(location), Config.getInstance().getDeathPenaltyRegionList())) {
             return isWhitelist;
         }
 
         return !isWhitelist;
     }
 
-    private static boolean isListedRegion(String region) {
-        for (String name : Config.getInstance().getWGRegionList()) {
+    private static boolean isListedRegion(String region, List<String> list) {
+        for (String name : list) {
             if (region.equalsIgnoreCase("[" + name + "]")) {
                 return true;
             }

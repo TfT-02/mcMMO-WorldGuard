@@ -34,7 +34,6 @@ public class AbilityListener implements Listener {
         String ability = event.getAbility().toString();
         String region = RegionUtils.getRegion(player.getLocation());
 
-
         if (region == null || canUseAbility(region, ability)) {
             return;
         }
@@ -45,7 +44,7 @@ public class AbilityListener implements Listener {
 
     public boolean canUseAbility(String region, String ability) {
         mcMMOWorldGuard.p.debug("Checking if a player can use " + ability + " in region " + region);
-        boolean whitelist = Config.getInstance().getWGUseAsWhitelist();
+        boolean whitelist = Config.getInstance().getAbilitiesUseAsWhitelist();
 
         if (Config.getInstance().getAbilitiesRegion(region).contains(ability)) {
             return whitelist;
