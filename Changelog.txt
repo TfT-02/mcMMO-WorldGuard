@@ -9,6 +9,7 @@ Key:
 
 Version 1.0.1
  + Added hardcore death penalty prevention! Disable stat loss in certain regions
+ = Fixed bug where version numbers where not detected properly
 
 Version 1.0.0
  + First release
