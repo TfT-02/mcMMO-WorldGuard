@@ -8,6 +8,7 @@ Key:
   - Removal
 
 Version 1.0.2
+ ! Built using WorldGuard v6
 
 Version 1.0.1
  + Added hardcore death penalty prevention! Disable stat loss in certain regions
