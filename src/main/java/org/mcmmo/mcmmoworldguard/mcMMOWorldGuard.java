@@ -65,16 +65,10 @@ public class mcMMOWorldGuard extends JavaPlugin {
         if (pluginManager.isPluginEnabled("mcMMO")) {
             // Check mcMMO version v1.5.01-b3605, which has cancellable SecondaryAbilityEvent
             String[] versionSplit = pluginManager.getPlugin("mcMMO").getDescription().getVersion().replace("SNAPSHOT-", "").split("-b");
-            int version = Integer.parseInt(versionSplit[0].replaceAll("[.]", ""));
             debug("Detected mcMMO version " + versionSplit[0] + " build " + versionSplit[1]);
 
-            if (version > 1501 || (!versionSplit[1].equals("${BUILD_NUMBER}") && Integer.parseInt(versionSplit[1]) >= 3605)) {
-                mcMMOEnabled = true;
-                debug("Hooked into mcMMO successfully!");
-            }
-            else {
-                this.getLogger().warning("mcMMO-WorldGuard does not support this version of mcMMO!");
-            }
+            mcMMOEnabled = true;
+            debug("Hooked into mcMMO successfully!");
         }
     }
 

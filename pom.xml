@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mcmmo</groupId>
     <artifactId>mcMMO-WorldGuard</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>mcMMO-WorldGuard</name>
     <url>https://github.com/mcMMO-Dev/mcMMO-WorldGuard</url>
     <issueManagement>
@@ -96,10 +96,6 @@
     </build>
     <repositories>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
-        </repository>
-        <repository>
             <id>md_5-repo</id>
             <url>http://repo.md-5.net/</url>
         </repository>
@@ -110,6 +106,10 @@
         <repository>
             <id>Plugin Metrics</id>
             <url>http://repo.mcstats.org/content/repositories/public</url>
+        </repository>
+        <repository>
+            <id>mcMMO</id>
+            <url>http://ci.drtshock.net/job/MCMMO/lastSuccessfulBuild/maven-repository/</url>
         </repository>
     </repositories>
     <dependencies>
@@ -123,14 +123,14 @@
         <dependency>
             <groupId>com.gmail.nossr50.mcMMO</groupId>
             <artifactId>mcMMO</artifactId>
-            <version>1.5.01-SNAPSHOT</version>
+            <version>1.5.04-SNAPSHOT</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.sk89q</groupId>
             <artifactId>worldguard</artifactId>
-            <version>LATEST</version>
+            <version>6.1</version>
             <scope>compile</scope>
             <type>jar</type>
         </dependency>
