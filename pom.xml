@@ -28,20 +28,27 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.6.1</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-                <version>2.4</version>
+                <version>2.5.2</version>
                 <executions>
                     <execution>
-                        <phase>validate</phase>
+                        <id>install-external</id>
+                        <phase>clean</phase>
                         <goals>
                             <goal>install-file</goal>
                         </goals>
                         <configuration>
                             <file>${basedir}/src/main/resources/mcMMO.jar</file>
+                            <repositoryLayout>default</repositoryLayout>
+                            <groupId>com.gmail.nossr50.mcMMO</groupId>
+                            <artifactId>mcMMO</artifactId>
                             <version>1.5.08.204</version>
+                            <packaging>jar</packaging>
+                            <generatePom>true</generatePom>
                         </configuration>
                     </execution>
                 </executions>
@@ -128,6 +135,7 @@
             <groupId>com.gmail.nossr50.mcMMO</groupId>
             <artifactId>mcMMO</artifactId>
             <version>1.5.08.204</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <distributionManagement>

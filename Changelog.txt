@@ -7,6 +7,16 @@ Key:
   ! Change
   - Removal
 
+Version 1.0.4
+ ! Built using Bukkit 1.12.1-R0.1-SNAPSHOT
+ ! Built using mcMMO 1.5.08 build 204
+ ! Built using WorldGuard 6.1
+ ! Changed Bukkit Maven repo to offical Bukkit
+ ! Changed mcMMO Maven repo to local dependency, as old repo seems to be gone
+ - Removed mcstats dependency references, as they don't appear to be used
+ = Fixed old Maven plugin version references
+ ! Changed mcMMO and WorldGuard to hard depends in plugin.yml, as this is useless without them
+
 Version 1.0.2
  ! Built using WorldGuard v6
 

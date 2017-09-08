@@ -10,4 +10,4 @@ author: TfT_02
 website: http://dev.bukkit.org/server-mods/mcmmo-worldguard/
 
 main: org.mcmmo.mcmmoworldguard.mcMMOWorldGuard
-softdepend: [mcMMO, WorldGuard]
+depend: [mcMMO, WorldGuard]
