@@ -53,6 +53,16 @@ public class RegionUtils {
             regions.remove(name);
         }
 
-        return regions.toString();
+        String regionName = regions.toString();
+
+        if (regionName.startsWith("[")) {
+            regionName = regionName.substring(1, regionName.length());
+        }
+
+        if (regionName.endsWith("]")) {
+            regionName = regionName.substring(0, regionName.length() - 1);
+        }
+
+        return regionName;
     }
 }
