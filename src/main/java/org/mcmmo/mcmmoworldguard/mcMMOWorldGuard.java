@@ -63,9 +63,7 @@ public class mcMMOWorldGuard extends JavaPlugin {
         PluginManager pluginManager = getServer().getPluginManager();
 
         if (pluginManager.isPluginEnabled("mcMMO")) {
-            // Check mcMMO version v1.5.01-b3605, which has cancellable SecondaryAbilityEvent
-            String[] versionSplit = pluginManager.getPlugin("mcMMO").getDescription().getVersion().replace("SNAPSHOT-", "").split("-b");
-            debug("Detected mcMMO version " + versionSplit[0] + " build " + versionSplit[1]);
+            debug("Detected mcMMO version " + pluginManager.getPlugin("mcMMO").getDescription().getVersion());
 
             mcMMOEnabled = true;
             debug("Hooked into mcMMO successfully!");

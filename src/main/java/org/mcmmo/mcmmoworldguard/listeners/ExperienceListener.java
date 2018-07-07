@@ -9,6 +9,7 @@ import com.gmail.nossr50.events.experience.McMMOPlayerXpGainEvent;
 
 import org.mcmmo.mcmmoworldguard.config.Config;
 import org.mcmmo.mcmmoworldguard.util.RegionUtils;
+import org.mcmmo.mcmmoworldguard.mcMMOWorldGuard;
 
 public class ExperienceListener implements Listener {
 
@@ -24,10 +25,20 @@ public class ExperienceListener implements Listener {
             return;
         }
 
-        experienceGained *= Config.getInstance().getExperienceModifierGlobal();
-        experienceGained *= Config.getInstance().getExperienceModifierTown(region);
+        mcMMOWorldGuard.p.debug("experienceGained pre modifiers = " + experienceGained);
+
+        double globalMod = Config.getInstance().getExperienceModifierGlobal();
+        experienceGained *= globalMod;
+
+        mcMMOWorldGuard.p.debug("experienceGained globally modified by " + globalMod + " = " + experienceGained);
+
+        double regionMod = Config.getInstance().getExperienceModifierTown(region);
+        experienceGained *= regionMod;
+
+        mcMMOWorldGuard.p.debug("experienceGained region " + region + " modified by " + regionMod + " = " + experienceGained);
 
         event.setRawXpGained(experienceGained);
+
     }
 
     private boolean isAffectedSkill(String skillName) {

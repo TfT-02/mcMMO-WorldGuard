@@ -44,8 +44,13 @@ public class Config extends ConfigLoader {
         return config.getStringList("Abilities.Regions." + region);
     }
 
-    public double getExperienceModifierGlobal() { return config.getDouble("Experience.Global_Modifier", 1.0); }
-    public double getExperienceModifierTown(String townName) { return config.getDouble("Experience.Towns." + townName, 1.0); }
+    public double getExperienceModifierGlobal() {
+        return config.getDouble("Experience.Global_Modifier", 1.0);
+    }
+
+    public double getExperienceModifierTown(String regionName) {
+        return config.getDouble("Experience.Regions." + regionName, 1.0);
+    }
 
     public List<String> getAffectedSkills() {
         List<String> list = new ArrayList<String>();
